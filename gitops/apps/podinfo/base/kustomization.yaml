@@ -4,6 +4,10 @@ metadata:
   name: podinfo
   namespace: flux-system
 
+labels:
+  - pairs:
+      app: podinfo
+
 resources:
   - deployment.yaml
   - service.yaml

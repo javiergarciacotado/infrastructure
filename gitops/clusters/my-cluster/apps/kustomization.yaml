@@ -1,12 +1,11 @@
-# clusters/my-cluster/apps.yaml
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: apps
+  name: podinfo
   namespace: flux-system
 spec:
-  interval: 10m0s
-  path: ./gitops/apps/production
+  interval: 5m
+  path: ./gitops/apps/podinfo
   prune: true
   sourceRef:
     kind: GitRepository

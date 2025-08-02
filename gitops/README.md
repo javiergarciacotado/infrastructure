@@ -1,27 +1,19 @@
-# Table of Contents
-
-## Core GitOps Concepts
-Getting Started with FluxCD
-Intermediate Usage
-GitOps Architectural Designs
-Operational Control & Insights
-Advanced Patterns and ArgoCD Parallels
-Bonus: Infrastructure as Code Integration
-
 ## Core GitOps Concepts
 
-### Understanding GitOps Philosophy
+### Core GitOps Concepts
+
+#### Understanding GitOps Philosophy
    
 GitOps is an operational model that uses Git as the single source of truth for declarative infrastructure and application configuration. It leverages Git's version control capabilities to manage deployments and operations. 
 
-#### Key Principles:
+##### Key Principles:
 
 - Declarative: Everything is described declaratively.
 - Versioned and Immutable: All changes are tracked in Git.
 - Pulled Automatically: Changes are pulled and applied automatically.
 - Continuously Reconciled: The desired state is continuously reconciled.
 
-#### GitOps vs Traditional CI/CD
+##### GitOps vs Traditional CI/CD
 
 Traditional CI/CD (Push-based)
 ┌─────────┐    ┌─────────┐    ┌─────────────┐    ┌─────────────┐
@@ -51,7 +43,7 @@ GitOps (Pull-based)
 12. **Compliance**: Ensure compliance by enforcing policies through GitOps tools.
 13. **Automation**: Automate deployments, scaling and updates using GitOps tools.
 
-#### Benefits of GitOps
+##### Benefits of GitOps
 
 - Enhanced Security: No direct cluster access needed
 - Better Auditability: All changes tracked in Git
@@ -96,7 +88,7 @@ nodes:
 kind get clusters
 ```
 
-### Bootstrapping FluxCD
+## Bootstrapping FluxCD
 
 The below command will:
 
@@ -120,7 +112,7 @@ flux bootstrap github \
   --personal
 ```
 
-#### Verifying Flux Installation
+### Verifying Flux Installation
 
 ```bash
 # Check Flux installation
@@ -138,7 +130,7 @@ kubectl logs -n flux-system -l app=source-controller
 kubectl logs -n flux-system -l app=kustomize-controller
 ```
 
-#### Understanding Flux Components
+### Understanding Flux Components
 
 ```yaml
 # Example: flux-system namespace after bootstrap

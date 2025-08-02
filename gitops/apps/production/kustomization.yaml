@@ -3,10 +3,10 @@ kind: Kustomization
 metadata:
   name: podinfo-production
   namespace: flux-system
+namespace: podinfo-production
 resources:
   - namespace.yaml
   - ../base
-
 patches:
   - target:
       kind: Deployment

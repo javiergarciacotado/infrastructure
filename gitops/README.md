@@ -167,3 +167,8 @@ metadata:
   name: notification-controller
   namespace: flux-system
 ```
+
+```shell
+flux get kustomizations
+
+```

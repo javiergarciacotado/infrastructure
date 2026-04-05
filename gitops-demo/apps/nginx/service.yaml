@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-gitops-svc
+spec:
+  selector:
+    app: nginx-gitops
+  ports:
+  - port: 80
